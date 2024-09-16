@@ -1,17 +1,13 @@
 (function ($) {
   "use strict";
-
   new WOW().init();
-
   //navbar cart
   $(".cart_link > a").on("click", function () {
     $(".mini_cart").addClass("active");
   });
-
   $(".mini_cart_close > a").on("click", function () {
     $(".mini_cart").removeClass("active");
   });
-
   //sticky navbar
   $(window).on("scroll", function () {
     var scroll = $(window).scrollTop();
@@ -21,7 +17,6 @@
       $(".sticky-header").addClass("sticky");
     }
   });
-
   // background image
   function dataBackgroundImage() {
     $("[data-bgimg]").each(function () {
@@ -31,11 +26,9 @@
       });
     });
   }
-
   $(window).on("load", function () {
     dataBackgroundImage();
   });
-
   //for carousel slider of the slider section
   $(".slider_area").owlCarousel({
     animateOut: "fadeOut",
@@ -46,7 +39,6 @@
     items: 1,
     dots: true,
   });
-
   //product column responsive
   $(".product_column3").slick({
     centerMode: true,
@@ -89,17 +81,14 @@
       },
     ],
   });
-
   //for tooltip
   $('[data-toggle="tooltip"]').tooltip();
-
   //tooltip active
   $(".action_links ul li a, .quick_button a").tooltip({
     animated: "fade",
     placement: "top",
     container: "body",
   });
-
   //product row activation responsive
   $(".product_row1").slick({
     centerMode: true,
@@ -141,7 +130,6 @@
       },
     ],
   });
-
   // blog section
   $(".blog_column3").owlCarousel({
     autoplay: true,
@@ -168,7 +156,6 @@
       },
     },
   });
-
   //navactive responsive
   $(".product_navactive").owlCarousel({
     autoplay: false,
@@ -200,7 +187,6 @@
   $(".modal").on("shown.bs.modal", function (e) {
     $(".product_navactive").resize();
   });
-
   $(".product_navactive a").on("click", function (e) {
     e.preventDefault();
     var $href = $(this).attr("href");
